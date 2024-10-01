@@ -44,3 +44,16 @@ Rettungskapsel* Raumschiff::getRettung()
 {
     return save;
 }
+
+void Raumschiff::addCrewMember(Avatar *inAvatar)
+{
+    crewListe.push_back(inAvatar);
+}
+
+void Raumschiff::printCrew()
+{
+    for(int i = 0 ; i < crewListe.size() ; i++)
+    {
+        cout << crewListe[i]->getName() << endl;
+    }
+}

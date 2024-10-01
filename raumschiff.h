@@ -1,7 +1,9 @@
 #ifndef RAUMSCHIFF_H
 #define RAUMSCHIFF_H
+#include "avatar.h"
 #include "rettungskapsel.h"
 #include <iostream>
+#include <vector>
 using namespace std;
 
 class Raumschiff
@@ -11,6 +13,8 @@ private:
     int xPos;
     int yPos;
     Rettungskapsel* save;
+    vector<Avatar*> crewListe;
+
 public:
     Raumschiff();
     Raumschiff(string inName);
@@ -20,6 +24,8 @@ public:
     void setPosition(int inX, int inY);
     void setRettung(Rettungskapsel* inSave);
     Rettungskapsel* getRettung();
+    void addCrewMember(Avatar* inAvatar);
+    void printCrew();
 
 
 };
